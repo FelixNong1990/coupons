@@ -32,7 +32,7 @@
 		<div class="bar-holder">
 
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'depth' => 1, 'fallback_cb' => false ) ); ?>
-			<p><?php _e( 'Copyright &copy;', APP_TD ); ?> <?php echo date('Y'); ?> | <a target="_blank" href="http://themebound.com/shop/flatter-responsive-child-theme-clipper/" title="Coupon Management Software">Coupon Management Software</a> | <?php _e( 'Powered by', APP_TD ); ?> <a target="_blank" href="http://wordpress.org/" title="WordPress">WordPress</a></p>
+			<p><?php _e( 'Copyright &copy;', APP_TD ); ?> <?php echo date('Y'); ?> Game Veins</p>
 
 		</div>
 

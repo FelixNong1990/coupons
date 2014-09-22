@@ -1306,7 +1306,7 @@ p.stats {
 }
 
 .content-box .item-footer {
-	width:75%;
+	/*width:75%;*/
 	clear:left;
 	margin-top:20px;
 }
@@ -2230,7 +2230,7 @@ img.screen-thumb {
 }
 .comments-list {
 	display:none;
-	margin:15px -33% 0 0;
+	margin:15px 0 0 0;
 }
 .comments-list .comments-box {
 	background-color:#E8E8E8;
@@ -5032,4 +5032,12 @@ ul.store-thumb-list li:hover a {
 		clear:both;
 	}
 	
+}
+
+#content li.description, #content li.description label {
+	margin-top: 0;
+}
+
+#content li.description textarea {
+	margin: 20px 0 0 40px;
 }

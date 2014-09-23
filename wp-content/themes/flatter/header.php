@@ -2,7 +2,7 @@
 
 	<div class="holder holder-panel clearfix">
 
-		<div class="frame">
+		<!--<div class="frame">
 
 			<div class="panel">
 				
@@ -44,7 +44,7 @@
 
 			</div>
 
-		</div> <!-- #frame -->
+		</div> --><!-- #frame -->
 
 	</div> <!-- #holder -->
 	

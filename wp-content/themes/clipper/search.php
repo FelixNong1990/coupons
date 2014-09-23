@@ -4,6 +4,8 @@ if ( $clpr_options->search_stats )
 	appthemes_save_search();
 ?>
 
+<?php //echo do_shortcode('[searchandfilter fields="stores,coupon_category,coupon_tag,coupon_type"]'); ?>
+
 <div id="content">
 
 	<div class="content-box">

@@ -31,33 +31,13 @@ $more = 0;
 				<div class="box-holder">
 
 					<div class="blog">
-
-						<?php appthemes_before_blog_post_title(); ?>
-						
-						<?php if( is_single() ) {
-							$tag = 'h1';
-						} else {
-							$tag = 'h2';
-						} ?>
-
-						<?php echo html( $tag, html_link( get_permalink(), get_the_title() ) ); ?>
-
-						<?php appthemes_after_blog_post_title(); ?>
-
-						<?php appthemes_before_blog_post_content(); ?>
-
-						<div class="text-box">
-
+						<div class="left-blog-content">
 							<?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
-
-							<?php the_content( '<p>' . __( 'Continue reading &raquo;', APP_TD ) . '</p>' ); ?>
-
-							<?php edit_post_link( __( 'Edit Post', APP_TD ), '<p class="edit">', '</p>' ); ?>
-
 						</div>
-
-						<?php appthemes_after_blog_post_content(); ?>
-
+						
+						<div class="right-blog-content">
+							
+						</div>
 					</div>
 
 				</div>

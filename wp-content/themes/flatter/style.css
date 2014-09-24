@@ -5183,6 +5183,16 @@ span.vote {
 	white-space: nowrap;
 }
 
-body.archive .store {
+/*body.archive .store {
 	padding-bottom: 0;
+}*/
+
+#menu-header div.adv_taxonomies {
+	margin: 0;
+	box-shadow: none;
+}
+
+.header_menu_res ul.menu > li:first-child + li:hover > a,.header_menu_res ul.menu > li:first-child + li + li:hover > a {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 }

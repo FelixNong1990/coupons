@@ -32,7 +32,7 @@
 		<div class="bar-holder">
 
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'container' => '', 'depth' => 1, 'fallback_cb' => false ) ); ?>
-			<p><?php _e( 'Copyright &copy;', APP_TD ); ?> <?php echo date('Y'); ?> Game Veins</p>
+			<p><?php _e( 'Copyright &copy;', APP_TD ); ?> <?php echo date('Y'); ?> Scouping</p>
 
 		</div>
 

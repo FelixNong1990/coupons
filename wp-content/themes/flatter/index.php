@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) )
 
 
 <div id="content">
-	<h1><?php echo get_the_title( CLPR_Blog_Archive::get_id() ); ?></h1>
+	<!--<h1><?php //echo get_the_title( CLPR_Blog_Archive::get_id() ); ?></h1>-->
 	<?php get_template_part( 'loop' ); ?>
 
 </div>

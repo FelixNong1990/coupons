@@ -4,11 +4,11 @@ function fl_init() {
 	
 	global $clpr_options;
 
-	set_post_thumbnail_size( 180, 110, true ); // blog post thumbnails
+	//set_post_thumbnail_size( 200, 200, true ); // blog post thumbnails
 	add_image_size( 'thumb-store-showcase', 110, 50, true ); // used on the store page
 	add_image_size( 'thumb-store', 180, 110, true ); // used on the store page
 	add_image_size( 'thumb-featured', 180, 110, true ); // used in featured coupons slider
-	add_image_size( 'thumb-large', 180, 110, true );
+	add_image_size( 'thumb-large', 200, 200, true );
 	
 	//Remove the main theme actions
 	remove_action( 'clipper_coupon_form', 'clpr_do_coupon_form' );

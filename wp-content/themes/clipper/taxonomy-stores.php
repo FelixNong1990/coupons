@@ -30,9 +30,9 @@ $url_out = clpr_get_store_out_url( $term );
 
 				<div class="clr"></div>
 
-				<div class="adsense">
-					<?php appthemes_advertise_content(); ?>
-				</div> <!-- #adsense -->
+				<!--<div class="adsense">
+					<?php //appthemes_advertise_content(); ?>
+				</div>--> <!-- #adsense -->
 
 			</div> <!-- #store -->
 

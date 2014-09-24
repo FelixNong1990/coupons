@@ -504,3 +504,8 @@ function resetVotes(postID, elementID, afterReset) {
 function is_ie() {
 	return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null)));
 }
+
+
+jQuery(document).ready(function($) {
+	$('.link-popup .link-popup-inner').text('Click to copy code & open site');
+});

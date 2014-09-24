@@ -28,19 +28,32 @@ $more = 0;
 
 			<div class="box-c">
 
-				<div class="box-holder">
 
-					<div class="blog">
-						<div class="left-blog-content">
-							<?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
+
+					<div class="blog cf">
+						<?php $destination_url = get_field('destination_url'); ?>
+						<div class="left_article_content">
+							<span class="article-date"><i class="icon-calendar"></i><?php the_time('M j, Y') ?></span>
+							<!--<span class="article-author"><i class="icon-calendar"></i>August 7, 2013</span>-->
+							<?php 
+								if (has_post_thumbnail()) the_post_thumbnail('thumbnail'); 
+								//echo $thumb = get_the_post_thumbnail(get_the_ID(), 'thumb-large');
+							?>
 						</div>
 						
-						<div class="right-blog-content">
-							
+						<div class="right_article_content">
+							<h1 class="article-header">
+								<a target="_blank" href="<?php echo $destination_url; ?>" class="button"><?php the_title(); ?></a>
+							</h1>
+							<p class="article-description">
+								<?php echo wp_trim_words( get_the_content(), 50 ); ?>
+							</p>
+							<div class="review-buttons">
+								<a target="_blank" href="<?php echo $destination_url; ?>" class="button"><?php _e( 'Read Full Review', APP_TD ); ?></a>
+							</div>
 						</div>
 					</div>
 
-				</div>
 
 			</div>
 

@@ -134,28 +134,28 @@ $more = 0;
 						
 						<div class="box-holder">
 							
-							<div class="blog">
-								
-								<?php appthemes_before_blog_post_title(); ?>
-								
-								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-								
-								<?php appthemes_after_blog_post_title(); ?>
-								
-								<?php appthemes_before_blog_post_content(); ?>
-								
-								<div class="text-box">
-									
-									<?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
-									
-									<?php the_content( '<p>' . __( 'Continue reading &raquo;', APP_TD ) . '</p>' ); ?>
-									
-									<?php edit_post_link( __( 'Edit Post', APP_TD ), '<p class="edit">', '</p>' ); ?>
-									
+							<div class="blog cf">
+								<?php $destination_url = get_field('destination_url'); ?>
+								<div class="left_article_content">
+									<span class="article-date"><i class="icon-calendar"></i><?php the_time('M j, Y') ?></span>
+									<!--<span class="article-author"><i class="icon-calendar"></i>August 7, 2013</span>-->
+									<?php 
+										if (has_post_thumbnail()) the_post_thumbnail('thumbnail'); 
+										//echo $thumb = get_the_post_thumbnail(get_the_ID(), 'thumb-large');
+									?>
 								</div>
 								
-								<?php appthemes_after_blog_post_content(); ?>
-								
+								<div class="right_article_content">
+									<h1 class="article-header">
+										<a target="_blank" href="<?php echo $destination_url; ?>" class="button"><?php the_title(); ?></a>
+									</h1>
+									<p class="article-description">
+										<?php echo wp_trim_words( get_the_content(), 50 ); ?>
+									</p>
+									<div class="review-buttons">
+										<a target="_blank" href="<?php echo $destination_url; ?>" class="button"><?php _e( 'Read Full Review', APP_TD ); ?></a>
+									</div>
+								</div>
 							</div>
 							
 						</div>

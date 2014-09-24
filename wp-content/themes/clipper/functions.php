@@ -238,12 +238,12 @@ add_action( 'wp_ajax_ajax-resetvotes', 'clpr_reset_coupon_votes_ajax' );
 
 
 // Image sizes
-set_post_thumbnail_size( 110 ); // blog post thumbnails
+//set_post_thumbnail_size( 200 ); // blog post thumbnails
 add_image_size( 'thumb-small', 30 ); // used in the sidebar widget
 add_image_size( 'thumb-med', 75 ); // used on the admin coupon list view
 add_image_size( 'thumb-store', 150 ); // used on the store page
 add_image_size( 'thumb-featured', 160 ); // used in featured coupons slider
-add_image_size( 'thumb-large', 180 );
+add_image_size( 'thumb-large', 200 );
 add_image_size( 'thumb-large-preview', 250 ); // used on the admin edit store page
 
 

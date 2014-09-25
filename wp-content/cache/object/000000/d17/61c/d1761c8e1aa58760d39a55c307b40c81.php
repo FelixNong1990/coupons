@@ -1,0 +1,1 @@
+qC$T<?php exit; ?>a:1:{s:7:"content";s:89:"a:1:{s:27:"chimpy-lite/chimpy-lite.php";a:2:{i:0;s:10:"ChimpyLite";i:1;s:9:"uninstall";}}";}

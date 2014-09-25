@@ -25,7 +25,9 @@ global $clpr_options;
 				
 				<div class="store-holder">
 					<div class="store-image">
-						<a href="<?php echo appthemes_get_custom_taxonomy($post->ID, APP_TAX_STORE, 'slug'); ?>"><img height="110" width="180" src="<?php echo fl_get_store_image_url($post->ID, 'post_id', '180'); ?>" alt="" /></a>
+						<a href="<?php echo appthemes_get_custom_taxonomy($post->ID, APP_TAX_STORE, 'slug'); ?>">
+							<img class="lazy" height="110" width="180" data-original="<?php echo fl_get_store_image_url($post->ID, 'post_id', '180'); ?>" src="<?php echo content_url(); ?>/images/blank.gif" alt="" />
+						</a>
 					</div>
 					<div class="store-name">
 						<?php echo get_the_term_list($post->ID, APP_TAX_STORE, ' ', ', ', ''); ?>

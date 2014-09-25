@@ -1,0 +1,1 @@
+rC$T<?php exit; ?>a:1:{s:7:"content";a:5:{s:19:"clpr_store_image_id";a:1:{i:0;s:2:"89";}s:14:"clpr_store_url";a:1:{i:0;s:24:"http://asmallorange.com/";}s:18:"clpr_store_aff_url";a:1:{i:0;s:42:"http://www.asmallorange.com/?a_aid=gotoaso";}s:17:"clpr_store_active";a:1:{i:0;s:3:"yes";}s:19:"clpr_aff_url_clicks";a:1:{i:0;s:1:"1";}}}

@@ -41,7 +41,7 @@ if ( $stores = fl_get_terms( APP_TAX_STORE, $args ) ) : ?>
 	
 		<?php foreach( $stores as $store ) : ?>
 		
-			<li style="background-image:url('<?php echo fl_get_store_image_url( $store->term_id, 'term_id', '110', '50' ); ?>')">
+			<li class="lazy" style="background-image: url('<?php echo content_url(); ?>/images/blank.gif'); background-size: 100% 100%;" data-original="<?php echo fl_get_store_image_url( $store->term_id, 'term_id', '110', '50' ); ?>">
 				<a href="<?php echo get_term_link( $store, APP_TAX_STORE ); ?>"><span class="store-count"><?php echo $store->count; ?></span> <?php echo _n( fl_get_option( 'fl_store_thumbs_singular' ), fl_get_option( 'fl_store_thumbs_plural' ),  $store->count, APP_TD ); ?></a>
 			</li>
 		

@@ -1,1 +1,0 @@
-rC$T<?php exit; ?>a:1:{s:7:"content";a:4:{s:14:"clpr_store_url";a:1:{i:0;s:22:"http://www.amazon.com/";}s:18:"clpr_store_aff_url";a:1:{i:0;s:33:"http://www.amazon.com/?rstore=123";}s:17:"clpr_store_active";a:1:{i:0;s:3:"yes";}s:19:"clpr_store_image_id";a:1:{i:0;s:3:"339";}}}

@@ -1,3 +1,5 @@
+
+
 # BEGIN W3TC Browser Cache
 <IfModule mod_mime.c>
     AddType text/css .css
@@ -67,13 +69,13 @@
     ExpiresByType application/javascript A31536000
     ExpiresByType text/javascript A31536000
     ExpiresByType text/x-js A31536000
-    ExpiresByType text/html A3600
-    ExpiresByType text/richtext A3600
-    ExpiresByType image/svg+xml A3600
-    ExpiresByType text/plain A3600
-    ExpiresByType text/xsd A3600
-    ExpiresByType text/xsl A3600
-    ExpiresByType text/xml A3600
+    ExpiresByType text/html A7200
+    ExpiresByType text/richtext A7200
+    ExpiresByType image/svg+xml A7200
+    ExpiresByType text/plain A7200
+    ExpiresByType text/xsd A7200
+    ExpiresByType text/xsl A7200
+    ExpiresByType text/xml A7200
     ExpiresByType video/asf A31536000
     ExpiresByType video/avi A31536000
     ExpiresByType image/bmp A31536000
@@ -160,6 +162,7 @@
     </IfModule>
 </FilesMatch>
 # END W3TC Browser Cache
+
 # BEGIN W3TC Page Cache core
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -181,6 +184,29 @@
 RewriteEngine On
 RewriteBase /coupons/
 RewriteRule ^index\.php$ - [L]
+RewriteRule ^modules/4bb2dcab/(.*) /coupons/modules/advanced-custom-fields/$1 [QSA,L]
+RewriteRule ^modules/9ca663b1/(.*) /coupons/modules/ajax-thumbnail-rebuild/$1 [QSA,L]
+RewriteRule ^modules/aa405a34/(.*) /coupons/modules/akismet/$1 [QSA,L]
+RewriteRule ^modules/89c327a9/(.*) /coupons/modules/appthemes-updater/$1 [QSA,L]
+RewriteRule ^modules/49f4db29/(.*) /coupons/modules/backupbuddy/$1 [QSA,L]
+RewriteRule ^modules/ce31fb0b/(.*) /coupons/modules/bwp-minify/$1 [QSA,L]
+RewriteRule ^modules/30bd8556/(.*) /coupons/modules/chimpy-lite/$1 [QSA,L]
+RewriteRule ^modules/f9ff8487/(.*) /coupons/modules/arscode-ninja-popups/$1 [QSA,L]
+RewriteRule ^modules/eee01829/(.*) /coupons/modules/search-filter/$1 [QSA,L]
+RewriteRule ^modules/dea2b53d/(.*) /coupons/modules/w3-total-cache/$1 [QSA,L]
+RewriteRule ^modules/5bb3512d/(.*) /coupons/modules/wordpress-importer/$1 [QSA,L]
+RewriteRule ^modules/b31275b0/(.*) /coupons/modules/wp-mail-smtp/$1 [QSA,L]
+RewriteRule ^lib/(.*) /coupons/wp-includes/$1 [QSA,L]
+RewriteRule ^file/(.*) /coupons/wp-content/uploads/$1 [QSA,L]
+RewriteRule ^modules/(.*) /coupons/wp-content/plugins/$1 [QSA,L]
+RewriteRule ^template/main\.css /coupons//index.php?style_wrapper=1 [QSA,L]
+RewriteRule ^template/(.*) /coupons/wp-content/themes/flatter/$1 [QSA,L]
+RewriteRule ^clipper/(.*) /coupons/wp-content/themes/clipper/$1 [QSA,L]
+RewriteRule ^template_main/(.*) /coupons/wp-content/themes/clipper/$1 [QSA,L]
+RewriteRule ^do_ajax\.php /coupons/wp-admin/admin-ajax.php [QSA,L]
+RewriteRule ^user_submit\.php /coupons/wp-comments-post.php?hide_my_wp=1234 [QSA,L]
+RewriteRule ^wp-content/themes/flatter/screenshot\.png|readme\.html|license\.txt|wp-content/debug\.log|wp-includes/$ /coupons/nothing_404_404 [QSA,L]
+RewriteRule ^(((wp-content|wp-includes)/([A-Za-z1-9-_/]*))|(wp-admin/(?!network/)([A-Za-z1-9-_/]+)))(\.txt|/)$ /coupons/nothing_404_404 [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /coupons/index.php [L]

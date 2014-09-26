@@ -510,6 +510,7 @@ function is_ie() {
 jQuery(document).ready(function($) {
 	$('.link-popup .link-popup-inner').text('Click to copy code & open site');
 	$("li.lazy,img.lazy").lazyload({
-    	effect : "fadeIn"
+    	effect : "fadeIn",
+		threshold : -50
   	});
 });

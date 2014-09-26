@@ -13,7 +13,7 @@ FileETag MTime Size
 </IfModule>
 <IfModule mod_expires.c>
     ExpiresActive On
-    ExpiresByType text/html M3600
+    ExpiresByType text/html M7200
 </IfModule>
 <IfModule mod_headers.c>
     Header set X-Powered-By "W3 Total Cache/0.9.4"

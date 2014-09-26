@@ -18,3 +18,14 @@ add_action('init', 'do_output_buffer');
 function do_output_buffer() {
         ob_start();
 }
+
+// if(!function_exists('custom_avatar')){
+	// function custom_avatar($avatar_defaults){
+		// $new_default_icon = 'http://localhost/gv/wp-content/images/mystery-man.png';
+		// $avatar_defaults[$new_default_icon] = 'Custom Avatar';
+		// return $avatar_defaults;
+	// }
+	// add_filter('avatar_defaults','custom_avatar');
+// }
+
+

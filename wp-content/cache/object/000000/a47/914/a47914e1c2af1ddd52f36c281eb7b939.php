@@ -1,1 +1,0 @@
-rC$T<?php exit; ?>a:1:{s:7:"content";a:1:{i:29;O:8:"stdClass":11:{s:7:"term_id";i:29;s:4:"name";s:8:"Software";s:4:"slug";s:8:"software";s:10:"term_group";i:0;s:16:"term_taxonomy_id";i:31;s:8:"taxonomy";s:15:"coupon_category";s:11:"description";s:0:"";s:6:"parent";i:0;s:5:"count";i:1;s:9:"object_id";i:66;s:6:"filter";s:3:"raw";}}}

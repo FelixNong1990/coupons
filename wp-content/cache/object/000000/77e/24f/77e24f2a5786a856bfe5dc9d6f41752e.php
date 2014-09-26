@@ -1,1 +1,0 @@
-rC$T<?php exit; ?>a:1:{s:7:"content";a:4:{s:12:"widget_pages";b:1;s:15:"widget_nav_menu";b:1;s:18:"widget_tabbed-blog";b:1;s:29:"fl_store_thumbs_featured_only";b:1;}}

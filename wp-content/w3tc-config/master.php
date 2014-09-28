@@ -167,7 +167,7 @@ return array(
 	'pgcache.prime.limit' => 10,
 	'pgcache.prime.sitemap' => '',
 	'pgcache.prime.post.enabled' => true,
-	'minify.enabled' => true,
+	'minify.enabled' => false,
 	'minify.auto' => false,
 	'minify.debug' => false,
 	'minify.engine' => 'file',

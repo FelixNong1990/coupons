@@ -1258,8 +1258,8 @@ function clpr_get_featured_slider_coupons() {
 		'post_status' => array( 'publish', 'unreliable' ),
 		'meta_key' => 'clpr_featured',
 		'meta_value' => '1',
-		'posts_per_page' => 15,
-		'orderby' => 'rand',
+		'posts_per_page' => 8,
+		//'orderby' => 'rand',
 		'no_found_rows' => true,
 		'suppress_filters' => false,
 	);

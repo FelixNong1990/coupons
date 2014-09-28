@@ -264,6 +264,7 @@ $.fn.jCarouselLite = function(options) {
 
     if (o.mouseWheel && div.mousewheel) {
       div.bind('mousewheel.jc', function(e, d) {
+        e.preventDefault();
         return d > 0 ? go(curr - o.scroll) : go(curr + o.scroll);
       });
     }

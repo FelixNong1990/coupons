@@ -620,8 +620,74 @@ function fl_do_coupon_form( $post ) {
 			<li>
 				<?php
 					// include the spam checker if enabled
-					appthemes_recaptcha();
-				?>
+					//appthemes_recaptcha();
+					
+					// Instantiate the ReallySimpleCaptcha class, which will handle all of the heavy lifting
+					$comment_captcha = new ReallySimpleCaptcha();
+
+					// ReallySimpleCaptcha class option defaults.
+					// Changing these values will hav no impact. For now, these are here merely for reference.
+					// If you want to configure these options, see "Set Really Simple CAPTCHA Options", below
+					// TODO: Add admin page to allow configuration of options.
+					$comment_captcha_defaults = array(
+					'chars' => 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789',
+					'char_length' => '4',
+					'img_size' => array( '72', '24' ),
+					'fg' => array( '0', '0', '0' ),
+					'bg' => array( '255', '255', '255' ),
+					'font_size' => '16',
+					'font_char_width' => '15',
+					'img_type' => 'png',
+					'base' => array( '6', '18'),
+					);
+
+					/**************************************
+					* All configurable options are below  *
+					***************************************/
+
+					// Set Really Simple CAPTCHA Options
+					$comment_captcha->chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+					$comment_captcha->char_length = '5';
+					$comment_captcha->img_size = array( '82', '24' );
+					$comment_captcha->fg = array( '0', '0', '0' );
+					$comment_captcha->bg = array( '255', '255', '255' );
+					$comment_captcha->font_size = '16';
+					$comment_captcha->font_char_width = '15';
+					$comment_captcha->img_type = 'png';
+					$comment_captcha->base = array( '6', '18' );
+
+					// Set Comment Form Options
+					$comment_captcha_form_label = 'Anti-Spam:';
+
+					/********************************************************************
+					* Nothing else to edit.  No configurable options below this point.  *
+					*********************************************************************/
+
+					// Generate random word and image prefix
+					$comment_captcha_word = $comment_captcha->generate_random_word();
+					$comment_captcha_prefix = mt_rand();
+					// Generate CAPTCHA image
+					$comment_captcha_image_name = $comment_captcha->generate_image($comment_captcha_prefix, $comment_captcha_word);
+					// Define values for comment form CAPTCHA fields
+					$comment_captcha_image_url =  get_bloginfo('wpurl') . '/wp-content/plugins/really-simple-captcha/tmp/';
+					$comment_captcha_image_src = $comment_captcha_image_url . $comment_captcha_image_name;
+					$comment_captcha_image_width = $comment_captcha->img_size[0];
+					$comment_captcha_image_height = $comment_captcha->img_size[1];
+					$comment_captcha_field_size = $comment_captcha->char_length;
+					// Output the comment form CAPTCHA fields
+					?>
+					<p class="comment-form-captcha">
+					<img src="<?php echo $comment_captcha_image_src; ?>"
+					 alt="captcha"
+					 width="<?php echo $comment_captcha_image_width; ?>"
+					 height="<?php echo $comment_captcha_image_height; ?>" />
+					<label for="captcha_code"><?php echo $comment_captcha_form_label; ?></label>
+					<input id="comment_captcha_code" name="comment_captcha_code"
+					 size="<?php echo $comment_captcha_field_size; ?>" type="text" />
+					<input id="comment_captcha_prefix" name="comment_captcha_prefix" type="hidden"
+					 value="<?php echo $comment_captcha_prefix; ?>" />
+					</p>
+			<?php	?>
 			</li>
 			
 			<?php

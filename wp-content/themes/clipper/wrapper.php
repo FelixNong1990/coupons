@@ -19,7 +19,7 @@
        <!--[if IE 7]><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/styles/ie7.css" media="screen"/><![endif]-->
 
 	<?php wp_head(); ?>
-
+	<?php flush(); ?>
 </head>
 
 <body id="top" <?php body_class(); ?>>

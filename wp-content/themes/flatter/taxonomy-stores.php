@@ -27,7 +27,7 @@ $url_out = clpr_get_store_out_url( $term );
 							<a class="rss-link" href="<?php echo get_term_feed_link($term->term_id, $taxonomy); ?>" rel="nofollow" target="_blank"><?php _e( 'Store RSS', APP_TD ); ?></a>
 							<h1><?php echo $term->name; ?></h1>
 							<div class="desc"><?php echo term_description(); ?></div>
-							<p class="store-url"><a href="<?php echo $url_out; ?>" target="_blank"><?php echo $stores_url; ?></a></p>
+							<p class="store-url"><a rel="nofollow" href="<?php echo $url_out; ?>" target="_blank"><?php echo $stores_url; ?></a></p>
 						</div> <!-- #info -->
 
 					</div> <!-- #text-box -->

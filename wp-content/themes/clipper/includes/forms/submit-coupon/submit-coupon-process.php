@@ -66,6 +66,27 @@ if ( isset($_POST['submitted']) ) {
 		if ( ! $resp->is_valid )
 			$errors->add( 'invalid_recaptcha', __( 'The reCaptcha anti-spam response was incorrect.', APP_TD ) );
 	}
+	
+	if(class_exists('ReallySimpleCaptcha')) {
+		$comment_captcha = new ReallySimpleCaptcha();
+		// This variable holds the CAPTCHA image prefix, which corresponds to the correct answer
+		$comment_captcha_prefix = $_POST['comment_captcha_prefix'];
+		// This variable holds the CAPTCHA response, entered by the user
+		$comment_captcha_code = $_POST['comment_captcha_code'];
+		// This variable will hold the result of the CAPTCHA validation. Set to 'false' until CAPTCHA validation passes
+		$comment_captcha_correct = false;
+		// Validate the CAPTCHA response
+		$comment_captcha_check = $comment_captcha->check( $comment_captcha_prefix, $comment_captcha_code );
+		// Set to 'true' if validation passes, and 'false' if validation fails
+		$comment_captcha_correct = $comment_captcha_check;
+		// clean up the tmp directory
+		$comment_captcha->remove($comment_captcha_prefix);
+		$comment_captcha->cleanup();
+		// If CAPTCHA validation fails (incorrect value entered in CAPTCHA field) don't process the comment.
+		if ( ! $comment_captcha_correct ) {
+			$errors->add( 'invalid_recaptcha', __( 'The reCaptcha anti-spam response was incorrect.', APP_TD ) );
+		}
+	}
 
 	// process the coupon upload if one has been submitted and coupon type is printable
 	if ( $posted['coupon_type_select'] == 'printable-coupon' ) {

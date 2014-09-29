@@ -518,4 +518,6 @@ jQuery(document).ready(function($) {
     	effect : "fadeIn",
 		threshold : -50
   	});
+	
+	$('script').last().attr('id','test');
 });

@@ -56,7 +56,7 @@ function fl_coupon_code_box( $coupon_type = null ) {
 	?>
 		<div class="couponAndTip">
 			<div class="link-holder">
-				<a href="<?php clpr_get_coupon_image('thumb-med', 'url'); ?>" id="coupon-link-<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to Print', APP_TD ); ?>" target="_blank" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" data-clipboard-text="<?php echo fl_get_option( 'fl_lbl_print_coupon' ); ?>"><span><i class="icon-print"></i><?php echo fl_get_option( 'fl_lbl_print_coupon' ); ?></span></a>
+				<a rel="nofollow" href="<?php clpr_get_coupon_image('thumb-med', 'url'); ?>" id="coupon-link-<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to Print', APP_TD ); ?>" target="_blank" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" data-clipboard-text="<?php echo fl_get_option( 'fl_lbl_print_coupon' ); ?>"><span><i class="icon-print"></i><?php echo fl_get_option( 'fl_lbl_print_coupon' ); ?></span></a>
 			</div> <!-- #link-holder -->
 			<p class="link-popup"><span class="link-popup-arrow"></span><span class="link-popup-inner"><?php _e( 'Click to print coupon', APP_TD ); ?></span></p>
 		</div><!-- /couponAndTip -->
@@ -76,7 +76,7 @@ function fl_coupon_code_box( $coupon_type = null ) {
 				$class .= ' ' . $coupon_type;
 				$button_text = wptexturize( get_post_meta( $post->ID, 'clpr_coupon_code', true ) ); 
 			} ?>
-			<a href="<?php echo clpr_get_coupon_out_url( $post ); ?>" id="coupon-link-<?php echo $post->ID; ?>" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to copy &amp; open site', APP_TD ); ?>" target="_blank" data-clipboard-text="<?php echo wptexturize( get_post_meta( $post->ID, 'clpr_coupon_code', true ) ); ?>"><span><?php echo $button_text; ?></span></a>
+			<a rel="nofollow" href="<?php echo clpr_get_coupon_out_url( $post ); ?>" id="coupon-link-<?php echo $post->ID; ?>" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to copy &amp; open site', APP_TD ); ?>" target="_blank" data-clipboard-text="<?php echo wptexturize( get_post_meta( $post->ID, 'clpr_coupon_code', true ) ); ?>"><span><?php echo $button_text; ?></span></a>
 		</div> <!-- #link-holder -->
 		<p class="link-popup"><span class="link-popup-arrow"></span><span class="link-popup-inner"><?php _e( 'Click to copy &amp; open site', APP_TD ); ?></span></p>
 	</div><!-- /couponAndTip -->
@@ -89,7 +89,7 @@ function fl_coupon_code_box( $coupon_type = null ) {
 	?>
 	<div class="couponAndTip">
 		<div class="link-holder">
-			<a href="<?php echo clpr_get_coupon_out_url( $post ); ?>" id="coupon-link-<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to open site', APP_TD ); ?>" target="_blank" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" data-clipboard-text="<?php echo fl_get_option( 'fl_lbl_redeem_offer' ); ?>"><span><?php echo fl_get_option( 'fl_lbl_redeem_offer' ); ?></span></a>
+			<a rel="nofollow" href="<?php echo clpr_get_coupon_out_url( $post ); ?>" id="coupon-link-<?php echo $post->ID; ?>" class="<?php echo $class; ?>" title="<?php _e( 'Click to open site', APP_TD ); ?>" target="_blank" data-coupon-nonce="<?php echo wp_create_nonce( 'popup_' . $post->ID ); ?>" data-coupon-id="<?php echo $post->ID; ?>" data-clipboard-text="<?php echo fl_get_option( 'fl_lbl_redeem_offer' ); ?>"><span><?php echo fl_get_option( 'fl_lbl_redeem_offer' ); ?></span></a>
 		</div> <!-- #link-holder -->
 		<p class="link-popup"><span class="link-popup-arrow"></span><span class="link-popup-inner"><?php _e( 'Click to open site', APP_TD ); ?></span></p>
 	</div><!-- /couponAndTip -->

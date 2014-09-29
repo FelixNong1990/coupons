@@ -1802,7 +1802,7 @@ function clpr_coupon_code_popup() {
 
 					<div class="popup-code-info">
 						<p><?php _e( 'Paste this code at checkout when you are done shopping.', APP_TD ); ?></p>
-						<a href="<?php echo clpr_get_coupon_out_url( $post ); ?>" title="<?php _e( 'Click to open site', APP_TD ); ?>" target="_blank" ><?php _e( 'Open site', APP_TD ); ?></a>
+						<a rel="nofollow" href="<?php echo clpr_get_coupon_out_url( $post ); ?>" title="<?php _e( 'Click to open site', APP_TD ); ?>" target="_blank" ><?php _e( 'Open site', APP_TD ); ?></a>
 					</div>
 
 					<?php do_action( 'clpr_coupon_code_popup', $post->ID ); ?>

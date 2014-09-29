@@ -5226,3 +5226,25 @@ span.vote {
 	font-size: 14px;
 	line-height: 22px;
 }
+
+#couponForm li p.comment-form-captcha {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+#couponForm li p.comment-form-captcha label {
+	margin: 22px 10px 0 0;
+}
+
+#couponForm li p.comment-form-captcha img {
+	margin-top: 15px;
+	margin-right: 15px;
+}
+
+#couponForm li p.comment-form-captcha #comment_captcha_code {
+	margin-top: 15px;
+}
+
+#couponForm li p.comment-form-captcha label, #couponForm li p.comment-form-captcha img, #couponForm li p.comment-form-captcha #comment_captcha_code {
+	float: left;
+}

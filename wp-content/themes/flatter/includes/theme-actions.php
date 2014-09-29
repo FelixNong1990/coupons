@@ -677,12 +677,12 @@ function fl_do_coupon_form( $post ) {
 					// Output the comment form CAPTCHA fields
 					?>
 					<p class="comment-form-captcha">
+					<label for="captcha_code"><?php echo $comment_captcha_form_label; ?></label>
 					<img src="<?php echo $comment_captcha_image_src; ?>"
 					 alt="captcha"
 					 width="<?php echo $comment_captcha_image_width; ?>"
 					 height="<?php echo $comment_captcha_image_height; ?>" />
-					<label for="captcha_code"><?php echo $comment_captcha_form_label; ?></label>
-					<input id="comment_captcha_code" name="comment_captcha_code"
+					<input placeholder="<?php _e( 'Please type anti-spam letters here', APP_TD ); ?>" id="comment_captcha_code" name="comment_captcha_code"
 					 size="<?php echo $comment_captcha_field_size; ?>" type="text" />
 					<input id="comment_captcha_prefix" name="comment_captcha_prefix" type="hidden"
 					 value="<?php echo $comment_captcha_prefix; ?>" />

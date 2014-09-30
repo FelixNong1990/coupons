@@ -408,6 +408,33 @@ jQuery(function() {
 	});
 	
 	
+	jQuery('body').on('click','#submitted',function(event){
+		if(!jQuery("#couponForm").valid()) return;
+		jQuery('#spinner').show();
+		var postURL = flatter_params.ajax_url,
+			comment_captcha_prefix = jQuery('#comment_captcha_prefix').val(),
+			comment_captcha_code = jQuery('#comment_captcha_code').val();
+		jQuery.ajax({
+			type: "post",
+			url: postURL,
+			data: "action=check-captcha&comment_captcha_prefix="+comment_captcha_prefix+"&comment_captcha_code="+comment_captcha_code,
+			success: function(status){
+				if(status == "correct") {
+					jQuery("#couponForm").submit();
+				} else {
+					jQuery('#spinner').hide();
+					jQuery('<div class="invalid">The captcha code is incorrect. Please try again.</div>').insertAfter('p.comment-form-captcha');
+				}
+			}, error: function() {
+				console.log('Something wrong happen. Please try again later.');
+			}
+		});
+		
+		return false;
+	});
+
+	
+	
 	// send the coupon via email pop-up form
 	jQuery( document ).on('click', 'button.send-email', function() {
 	 

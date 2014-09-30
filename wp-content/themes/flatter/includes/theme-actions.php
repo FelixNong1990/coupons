@@ -476,10 +476,43 @@ function fl_post_comment_ajax() {
 add_action( 'wp_ajax_nopriv_post-comment', 'fl_post_comment_ajax' );
 add_action( 'wp_ajax_post-comment', 'fl_post_comment_ajax' );
 
+
+add_action('wp_ajax_nopriv_check-captcha', 'check_captcha');
+add_action('wp_ajax_check-captcha', 'check_captcha');
+function check_captcha()
+{
+	if(class_exists('ReallySimpleCaptcha')) {
+		$comment_captcha = new ReallySimpleCaptcha();
+		// This variable holds the CAPTCHA image prefix, which corresponds to the correct answer
+		$comment_captcha_prefix = $_POST['comment_captcha_prefix'];
+		// This variable holds the CAPTCHA response, entered by the user
+		$comment_captcha_code = $_POST['comment_captcha_code'];
+		// This variable will hold the result of the CAPTCHA validation. Set to 'false' until CAPTCHA validation passes
+		$comment_captcha_correct = false;
+		// Validate the CAPTCHA response
+		$comment_captcha_check = $comment_captcha->check( $comment_captcha_prefix, $comment_captcha_code );
+		// Set to 'true' if validation passes, and 'false' if validation fails
+		$comment_captcha_correct = $comment_captcha_check;
+		
+		// If CAPTCHA validation fails (incorrect value entered in CAPTCHA field) don't process the comment.
+		if ( ! $comment_captcha_correct ) {
+			echo "The captcha code is incorrect. Please try again."; 
+		} else {
+			// clean up the tmp directory
+			//$comment_captcha->remove($comment_captcha_prefix);
+			//$comment_captcha->cleanup();
+			echo "correct";
+		}
+	}
+
+    exit;
+}
+
+
 // add the coupon submission form in submit-coupon-form.php
 function fl_do_coupon_form( $post ) {
 	global $clpr_options;
-	
+
 	$form_fields = array(
 	'post_title' => 'post',
 	'clpr_store_name' => APP_TAX_STORE,
@@ -617,7 +650,7 @@ function fl_do_coupon_form( $post ) {
 				<?php } ?>
 			</li>
 			
-			<li>
+			<li class="captcha">
 				<?php
 					// include the spam checker if enabled
 					//appthemes_recaptcha();
@@ -648,7 +681,7 @@ function fl_do_coupon_form( $post ) {
 					// Set Really Simple CAPTCHA Options
 					$comment_captcha->chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 					$comment_captcha->char_length = '5';
-					$comment_captcha->img_size = array( '82', '24' );
+					$comment_captcha->img_size = array( '85', '24' );
 					$comment_captcha->fg = array( '0', '0', '0' );
 					$comment_captcha->bg = array( '255', '255', '255' );
 					$comment_captcha->font_size = '16';
@@ -701,6 +734,7 @@ function fl_do_coupon_form( $post ) {
 			
 			<li>
 				<button type="submit" class="btn coupon" id="submitted" name="submitted" value="submitted"><?php echo $button_text; ?></button>
+				<img id="spinner" src="<?php echo content_url(); ?>/images/spinner.gif" alt="Loading..."/>
 			</li>
 			
 		</ol>

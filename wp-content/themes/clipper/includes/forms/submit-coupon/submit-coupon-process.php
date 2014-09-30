@@ -9,9 +9,8 @@
  *
  */
 
-
 // see if the form has been submitted
-if ( isset($_POST['submitted']) ) {
+if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if ( ! $errors )
 		$errors = new WP_Error();

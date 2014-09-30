@@ -2541,8 +2541,11 @@ div.invalid {
 	color: #C13C2C;
     font-size: 14px;
     font-weight: bold;
-    margin: 10px 0 0 160px;
+    margin: 0 0 0 160px;
 }
+li.captcha div.invalid {
+	margin-top: -15px;
+} 
 #respond textarea.commentbox {
 	width:100%;
 	height:160px;
@@ -5237,7 +5240,7 @@ span.vote {
 }
 
 #couponForm li p.comment-form-captcha img {
-	margin-top: 15px;
+	margin-top: 18px;
 	margin-right: 15px;
 }
 
@@ -5247,4 +5250,9 @@ span.vote {
 
 #couponForm li p.comment-form-captcha label, #couponForm li p.comment-form-captcha img, #couponForm li p.comment-form-captcha #comment_captcha_code {
 	float: left;
+}
+
+#content .blog img#spinner {
+	display: none;
+	float: right;
 }

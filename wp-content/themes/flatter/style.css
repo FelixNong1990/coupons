@@ -5256,3 +5256,42 @@ span.vote {
 	display: none;
 	float: right;
 }
+
+.gform_body input, .gform_body textarea {
+	padding: 8px 12px !important;
+}
+
+.gform_wrapper .gform_body .left_label .gfield_label {
+	margin-top: 12px !important;
+}
+
+.gform_wrapper .gform_body .left_label li.contact_message .gfield_label {
+	margin-top: 50px !important;
+}
+
+.gform_wrapper .gform_body .contact_email {
+	margin-bottom: 30px !important;
+}
+
+.gfield.contact_captcha .gfield_description {
+	margin-left: 32% !important;
+}
+
+.gform_body  .validation_message {
+	max-width: 100% !important;
+	margin-left: 32% !important;
+}
+
+body .gform_footer input[type=submit] {
+	padding: 10px 25px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.gform_wrapper li.gfield.gfield_error {
+	background-color: #fff !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+}

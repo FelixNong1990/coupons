@@ -11,7 +11,13 @@
 
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php echo appthemes_get_feed_url(); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	
+	<?php
+	if(is_page('contact')) {
+	?>
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<?php 
+	} 
+	?>
 	<!--[if IE]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<![endif]-->

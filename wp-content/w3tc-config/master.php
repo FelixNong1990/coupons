@@ -133,6 +133,7 @@ return array(
 	'pgcache.reject.uri' => array(
 		0 => 'wp-.*\\.php',
 		1 => 'index\\.php',
+		2 => 'happytree',
 	),
 	'pgcache.reject.ua' => array(
 		0 => '',

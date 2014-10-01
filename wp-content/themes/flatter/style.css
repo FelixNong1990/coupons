@@ -5273,13 +5273,13 @@ span.vote {
 	margin-bottom: 30px !important;
 }
 
-.gfield.contact_captcha .gfield_description {
-	margin-left: 32% !important;
+.gfield.contact_captcha .gfield_description,.gform_wrapper .left_label div.charleft {
+	margin-left: 33% !important;
 }
 
 .gform_body  .validation_message {
 	max-width: 100% !important;
-	margin-left: 32% !important;
+	margin-left: 33% !important;
 }
 
 body .gform_footer input[type=submit] {
@@ -5287,6 +5287,15 @@ body .gform_footer input[type=submit] {
 	text-transform: uppercase;
 	font-weight: bold;
 	cursor: pointer;
+	float: left;
+}
+
+body .gform_footer {
+	overflow: auto;
+}
+
+body .gform_footer .gform_ajax_spinner {
+	float: left;
 }
 
 .gform_wrapper li.gfield.gfield_error {
@@ -5295,3 +5304,44 @@ body .gform_footer input[type=submit] {
 	padding: 0 !important;
 	border: 0 !important;
 }
+
+.gform_wrapper li.gfield.gfield_error.contact_captcha {
+	padding-left: 10px !important;
+}
+
+.gform_wrapper .left_label .simple_captcha_medium {
+	margin-left: 33% !important;
+}
+
+.gform_wrapper .gform_footer.left_label {
+	padding-left: 33% !important;
+}
+
+body .gform_heading .gform_title {
+	margin-left: 10px !important;
+	text-align: left !important;
+	margin-bottom: 10px !important;
+}
+
+body.contact .blog .text-box {
+	padding-top: 0;
+}
+
+body.contact .gform_wrapper .gform_heading {
+	margin-bottom: 30px;
+}
+
+body.contact .validation_error {
+	margin-left: 10px;
+}
+
+body .blog #gforms_confirmation_message {
+	color: #3C763D;
+	font-size: 18px;
+}
+
+body.contact .blog .text-box {
+	padding-bottom: 0;
+}
+
+

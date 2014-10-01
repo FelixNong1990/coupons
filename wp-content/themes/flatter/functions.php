@@ -19,6 +19,16 @@ function do_output_buffer() {
         ob_start();
 }
 
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+	global $post;
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_name;
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );
+
 // if(!function_exists('custom_avatar')){
 	// function custom_avatar($avatar_defaults){
 		// $new_default_icon = 'http://localhost/gv/wp-content/images/mystery-man.png';
@@ -27,5 +37,7 @@ function do_output_buffer() {
 	// }
 	// add_filter('avatar_defaults','custom_avatar');
 // }
+
+
 
 

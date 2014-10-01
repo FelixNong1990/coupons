@@ -690,7 +690,7 @@ function fl_do_coupon_form( $post ) {
 					$comment_captcha->base = array( '6', '18' );
 
 					// Set Comment Form Options
-					$comment_captcha_form_label = 'Anti-Spam:';
+					$comment_captcha_form_label = 'Human Verification';
 
 					/********************************************************************
 					* Nothing else to edit.  No configurable options below this point.  *
@@ -715,7 +715,7 @@ function fl_do_coupon_form( $post ) {
 					 alt="captcha"
 					 width="<?php echo $comment_captcha_image_width; ?>"
 					 height="<?php echo $comment_captcha_image_height; ?>" />
-					<input placeholder="<?php _e( 'Please type anti-spam letters here', APP_TD ); ?>" id="comment_captcha_code" name="comment_captcha_code"
+					<input placeholder="<?php _e( 'Please type the verification code here', APP_TD ); ?>" id="comment_captcha_code" name="comment_captcha_code"
 					 size="<?php echo $comment_captcha_field_size; ?>" type="text" />
 					<input id="comment_captcha_prefix" name="comment_captcha_prefix" type="hidden"
 					 value="<?php echo $comment_captcha_prefix; ?>" />

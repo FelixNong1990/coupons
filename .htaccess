@@ -1,3 +1,4 @@
+Redirect 301 /contact http://localhost/coupons/share-coupon/
 # BEGIN All In One WP Security
 #AIOWPS_BASIC_HTACCESS_RULES_START
 <Files .htaccess>
@@ -341,5 +342,4 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /coupons/index.php [L]
 </IfModule>
-
 # END WordPress

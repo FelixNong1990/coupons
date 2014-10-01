@@ -1,0 +1,3 @@
+[10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Installer::run_installer() - Update of option settings failed upon plugin activation!
+[10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Deactivation::run_deactivation_tasks() - Original config settings not found!
+[10/01/2014 6:52 AM] - SUCCESS : Logging User Out with login admin because they changed their username.

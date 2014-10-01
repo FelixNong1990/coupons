@@ -1,0 +1,1 @@
+[10/01/2014 6:51 AM] - SUCCESS : Cronjob_Handler - Hourly cron handler got fired.

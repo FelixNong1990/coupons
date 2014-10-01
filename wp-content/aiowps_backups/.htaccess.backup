@@ -1,7 +1,4 @@
-RewriteEngine on
-RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http://(www.)?localhost/coupons/.*$ [NC]
-RewriteRule .(gif|jpe?g|png)$ - [F]
+
 
 # BEGIN W3TC Browser Cache
 <IfModule mod_mime.c>

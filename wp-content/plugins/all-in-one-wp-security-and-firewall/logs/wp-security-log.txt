@@ -1,3 +1,7 @@
 [10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Installer::run_installer() - Update of option settings failed upon plugin activation!
 [10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Deactivation::run_deactivation_tasks() - Original config settings not found!
 [10/01/2014 6:52 AM] - SUCCESS : Logging User Out with login admin because they changed their username.
+[10/01/2014 7:52 AM] - FAILURE : save_scan_data_to_db() - Error inserting data to DB!
+[10/01/2014 8:05 AM] - FAILURE : Nonce check failed on enable advanced firewall settings!
+[10/01/2014 8:07 AM] - FAILURE : Nonce check failed on enable advanced firewall settings!
+[10/01/2014 9:44 AM] - FAILURE : Error inserting record into rnp4ad_aiowps_login_activity

@@ -61,7 +61,7 @@
 					<?php if ( $clpr_options->use_logo ) { ?>
 						
 						<a href="<?php echo home_url('/'); ?>" title="<?php bloginfo( 'description' ); ?>">
-							<img src="<?php if ( ! empty( $clpr_options->logo_url ) ) echo $clpr_options->logo_url; else { echo appthemes_locate_template_uri('images/logo.png'); } ?>" alt="<?php bloginfo( 'name' ); ?>" />
+							<img width="119" height="29" src="<?php if ( ! empty( $clpr_options->logo_url ) ) echo $clpr_options->logo_url; else { echo appthemes_locate_template_uri('images/logo.png'); } ?>" alt="<?php bloginfo( 'name' ); ?>" />
 						</a>
 					
 						<?php } else { ?>

@@ -348,19 +348,21 @@ if ( isset($complete) && $complete == 1 ) {
 <?php
 } else {
 ?>
+	
+	<div class="thankyou">
+		<h1><i class="fa fa-check fa-lg"></i> <?php _e( 'Thanks for spreading the savings with everyone!', APP_TD ); ?></h1>
 
-	<h1><?php _e( 'Thanks for Sharing!', APP_TD ); ?></h1>
+		<div class="text-box">
 
-	<div class="text-box">
+			<div class="text-holder">
 
-		<div class="text-holder">
+				<p class="suc_message"><?php _e( 'Your coupon has successfully been submitted.', APP_TD ); ?></p>
 
-			<p><?php _e( 'Your coupon has successfully been submitted.', APP_TD ); ?></p>
+				<!-- <div class="pad75"></div> -->
 
-			<div class="pad75"></div>
+			</div>
 
 		</div>
-
 	</div>
 
 <?php } ?>

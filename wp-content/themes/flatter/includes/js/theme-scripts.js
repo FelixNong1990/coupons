@@ -57,7 +57,7 @@ jQuery(document).ready(function() {
 			pause: true,
 			auto: true,
 			random: false,
-			timeout: 2800,
+			timeout: 4000,
 			//scroll: 4,
 			mouseWheel: true,
 			speed: 500,

@@ -182,7 +182,7 @@ class CLPR_Widget_Featured_Stores extends WP_Widget {
 					continue;
 				$link = get_term_link( $tax_val, APP_TAX_STORE );
 				echo '<li>';
-				echo '<a href="' . $link . '"><img src="' . clpr_get_store_image_url( $tax_val->term_id, 'term_id', 160 ) . '" alt="" /><span>' . $tax_val->name . '</span></a>';
+				echo '<a href="' . $link . '"><img width="162" height="102" src="' . clpr_get_store_image_url( $tax_val->term_id, 'term_id', 160 ) . '" alt="" /><span>' . $tax_val->name . '</span></a>';
 				echo '</li>';
 				$i++;
 			}

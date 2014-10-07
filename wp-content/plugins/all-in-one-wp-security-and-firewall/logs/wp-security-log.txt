@@ -1,8 +1,9 @@
-[10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Installer::run_installer() - Update of option settings failed upon plugin activation!
-[10/01/2014 6:51 AM] - FAILURE : AIOWPSecurity_Deactivation::run_deactivation_tasks() - Original config settings not found!
-[10/01/2014 6:52 AM] - SUCCESS : Logging User Out with login admin because they changed their username.
-[10/01/2014 7:52 AM] - FAILURE : save_scan_data_to_db() - Error inserting data to DB!
-[10/01/2014 8:05 AM] - FAILURE : Nonce check failed on enable advanced firewall settings!
-[10/01/2014 8:07 AM] - FAILURE : Nonce check failed on enable advanced firewall settings!
-[10/01/2014 9:44 AM] - FAILURE : Error inserting record into rnp4ad_aiowps_login_activity
-[10/01/2014 3:55 PM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/04/2014 9:07 AM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/04/2014 11:27 AM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/04/2014 2:26 PM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/04/2014 3:31 PM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/04/2014 6:50 PM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/05/2014 9:59 AM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/05/2014 10:56 AM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/06/2014 6:02 AM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix
+[10/06/2014 4:00 PM] - SUCCESS : Force Logout - This user logged in more than (60) minutes ago. Doing a force log out for the user with username: felix

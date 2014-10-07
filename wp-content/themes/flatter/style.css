@@ -1483,7 +1483,7 @@ p.link-popup span.link-popup-inner {
 	float:left;
 	margin:0;
 	list-style:none;
-	width:195px;
+	width:160px;
 	position:relative;
 	border:none;
 	padding:0;
@@ -1741,7 +1741,7 @@ tr .even:hover {
 }
 .store .desc {
 	line-height:16px;
-	margin:0 0 5px;
+	margin:10px 0;
 }
 div.desc {
 	display:inline-block;
@@ -5344,4 +5344,16 @@ body.contact .blog .text-box {
 	padding-bottom: 0;
 }
 
+div.thankyou h1{
+	color: #3c763d;
+	margin-bottom: 0 !important;
+}
 
+div.thankyou .text-box, div.thankyou .text-holder {
+	padding-bottom: 0 !important;
+}
+
+p.suc_message {
+	font-size: 15px;
+	color: #555;
+}

@@ -133,7 +133,7 @@ return array(
 	'pgcache.reject.uri' => array(
 		0 => 'wp-.*\\.php',
 		1 => 'index\\.php',
-		2 => 'happytree',
+		2 => 'happytreefriends',
 	),
 	'pgcache.reject.ua' => array(
 		0 => '',
@@ -430,7 +430,7 @@ return array(
 	'browsercache.other.etag' => true,
 	'browsercache.other.w3tc' => true,
 	'browsercache.other.replace' => true,
-	'browsercache.timestamp' => '1411698176',
+	'browsercache.timestamp' => '1412223901',
 	'browsercache.replace.exceptions' => array(
 		0 => '',
 	),

@@ -14,7 +14,11 @@
 					<div class="text-box">
 						<a class="rss-link" href="<?php echo get_term_feed_link($term->term_id, $taxonomy); ?>" rel="nofollow" target="_blank"><?php _e( 'Coupon Tag RSS', APP_TD ); ?></a>
 						<h1><?php printf( __( 'Coupons tagged with "%s"', APP_TD ), $term->name ); ?></h1>
-						<div class="desc"><?php echo term_description(); ?></div>
+						<?php
+						if(strlen(term_description()) > 0) {
+						?>
+							<div class="desc"><?php echo term_description(); ?></div>
+						<?php } ?>
 					</div> <!-- #text-box -->
 
 					<div class="clr"></div>
